@@ -20,4 +20,8 @@ public class Event {
         System.out.println("Venue: " + venue);
         System.out.println("Seats: " + seats);
     }
+    
+    public int getEventId() {
+        return eventId;
+    }
 }

@@ -21,9 +21,23 @@ public class EventManager {
     }
 
     public void viewEvents(){
-        for(Event e : events){
-            e.displayEvent();
-            System.out.println();
+        if(events.isEmpty()){
+    System.out.println("No events available.");
         }
+        else{
+            for(Event e : events){
+                e.displayEvent();
+                System.out.println();
+            }
+        }
+    }
+
+    public Event searchEvent(int id) {
+        for(Event e : events) {
+            if(e.getEventId() == id) {
+                return e;
+            }
+        }
+        return null;
     }
 }
