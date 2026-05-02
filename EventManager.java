@@ -15,5 +15,8 @@ public class EventManager {
     }
 
     //Event methods
-    
+    public void addEvent(Event e){
+        events.add(e);
+        System.out.println("Event added succesfully!");
+    }
 }
