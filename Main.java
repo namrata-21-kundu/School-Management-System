@@ -14,7 +14,27 @@ public class Main {
 
             switch(choice){
                 case 1:
+                    System.out.println("Enter Event ID: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Enter event name: ");
+                    String name = sc.nextLine();
+
+                    System.out.println("Enter date of event: ");
+                    String date = sc.nextLine();
+
+                    System.out.println("Enter venue: ");
+                    String venue = sc.nextLine();
+
+                    System.out.println("Enter seats: ");
+                    int seats = sc.nextInt();
+
+                    Event e = new Event(id, name, date, venue, seats);
+                    manager.addEvent(e);
+
                     break;
+                    
                 case 2:
                     break;
                 case 3:
