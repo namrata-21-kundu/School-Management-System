@@ -34,9 +34,11 @@ public class Main {
                     manager.addEvent(e);
 
                     break;
-                    
+
                 case 2:
+                    manager.viewEvents();
                     break;
+                    
                 case 3:
                     break;
                 case 4:

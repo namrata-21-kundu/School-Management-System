@@ -19,4 +19,11 @@ public class EventManager {
         events.add(e);
         System.out.println("Event added succesfully!");
     }
+
+    public void viewEvents(){
+        for(Event e : events){
+            e.displayEvent();
+            System.out.println();
+        }
+    }
 }
