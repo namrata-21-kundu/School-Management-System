@@ -15,7 +15,7 @@ public class Main {
             switch(choice){
                 case 1:
                     System.out.println("Enter Event ID: ");
-                    int id = sc.nextInt();
+                    int id = sc.nextInt();   
                     sc.nextLine();
 
                     System.out.println("Enter event name: ");
