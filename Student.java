@@ -10,6 +10,11 @@ public class Student extends Person{
         this.marks = new HashMap<>();
     }
 
+    //getter for rollNo
+    public int getRollNo(){
+        return rollNo;
+    }
+
     public void addMarks(String subject, int mark){
         marks.put(subject,mark);
     }
