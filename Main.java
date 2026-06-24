@@ -2,8 +2,9 @@ import java.util.* ;
 public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        EventManager manager = new EventManager();
 
+        /*School task = new School();
+        
         while(true){
             System.out.println("1. Add Event");
             System.out.println("2. View Events");
@@ -47,6 +48,16 @@ public class Main {
                 default:
                     System.out.println("Wrong choice");
             }
-        }
+        }*/
+
+        //temporary Student.java test
+        /*Student s1 = new Student(1, "nk", 20, 21);
+        s1.addMarks("maths",90 );
+        s1.addMarks("eng", 97);
+        s1.displayInfo();*/
+
+        //temporary Teacher.java test
+        /*Teacher t1 = new Teacher(2, "namrata", 29, "english ",90000);
+        t1.displayInfo();*/
     }
 }
