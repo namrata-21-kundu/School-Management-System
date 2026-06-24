@@ -1,16 +1,12 @@
-# School Management System (Java)
+# 🎓 School Management System (Java)
 
-## Overview
-
-The School Management System is a console-based Java application designed to manage students, teachers, and academic records efficiently. This project demonstrates the practical implementation of Object-Oriented Programming (OOP) concepts, exception handling, and Java Collection Frameworks without using databases or external frameworks.
-
-The system allows users to perform various school administration tasks such as adding students, managing teachers, recording marks, and generating report cards through a menu-driven interface.
+A console-based School Management System built using Java to manage students, teachers, and academic records. The project demonstrates core Object-Oriented Programming (OOP) concepts, custom exception handling, and Java Collections through a menu-driven application.
 
 ---
 
-## Features
+## 🚀 Features
 
-### Student Management
+### 👨‍🎓 Student Management
 
 * Add new students
 * View all students
@@ -18,21 +14,21 @@ The system allows users to perform various school administration tasks such as a
 * Update student details
 * Remove students
 
-### Teacher Management
+### 👩‍🏫 Teacher Management
 
 * Add new teachers
 * View all teachers
 * Search teachers
 * Remove teachers
 
-### Academic Management
+### 📚 Academic Management
 
 * Assign subjects
 * Record student marks
 * Calculate grades
 * Generate report cards
 
-### Exception Handling
+### ⚠️ Exception Handling
 
 * Duplicate student entries
 * Invalid roll numbers
@@ -42,40 +38,45 @@ The system allows users to perform various school administration tasks such as a
 
 ---
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 * Java
 * Object-Oriented Programming (OOP)
 * Exception Handling
-* Java Collections Framework (ArrayList, HashMap)
+* Java Collections Framework
+
+  * ArrayList
+  * HashMap
 
 ---
 
-## OOP Concepts Implemented
+## 🧩 OOP Concepts Implemented
 
-### Encapsulation
+### 🔒 Encapsulation
 
-Private data members with public getters and setters.
+* Private data members
+* Public getters and setters
 
-### Inheritance
+### 🧬 Inheritance
 
-Student and Teacher classes inherit from the Person class.
+* `Student` extends `Person`
+* `Teacher` extends `Person`
 
-### Polymorphism
+### 🔄 Polymorphism
 
-Method overriding for displaying information.
+* Method overriding using `displayInfo()`
 
-### Abstraction
+### 🎭 Abstraction
 
-Abstract Person class defining common behavior.
+* Abstract `Person` class
 
-### Exception Handling
+### ⚡ Exception Handling
 
-Custom exceptions for application-specific errors.
+* Custom exceptions for application-specific errors
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 src/
@@ -84,8 +85,6 @@ src/
 ├── Student.java
 ├── Teacher.java
 ├── School.java
-├── StudentManager.java
-├── TeacherManager.java
 │
 ├── exceptions/
 │   ├── StudentNotFoundException.java
@@ -97,54 +96,78 @@ src/
 
 ---
 
-## Sample Menu
+## 🔄 System Flow
 
 ```text
-===== SCHOOL MANAGEMENT SYSTEM =====
-
-1. Add Student
-2. View Students
-3. Search Student
-4. Delete Student
-
-5. Add Teacher
-6. View Teachers
-7. Search Teacher
-8. Delete Teacher
-
-9. Add Marks
-10. Generate Report Card
-
-0. Exit
+Start
+  │
+  ▼
+Main Menu
+  │
+  ├── Student Management
+  │      ├── Add Student
+  │      ├── Search Student
+  │      ├── View Students
+  │      └── Delete Student
+  │
+  ├── Teacher Management
+  │      ├── Add Teacher
+  │      ├── Search Teacher
+  │      ├── View Teachers
+  │      └── Delete Teacher
+  │
+  ├── Academic Management
+  │      ├── Add Marks
+  │      ├── Calculate Grade
+  │      └── Generate Report Card
+  │
+  └── Exit
 ```
 
 ---
 
-## Learning Outcomes
+## 📊 Class Diagram
 
-Through this project, you will gain practical experience with:
+```text
+              Person (Abstract)
+                    │
+       ┌────────────┴────────────┐
+       │                         │
+    Student                  Teacher
 
-* Class and object design
-* Inheritance and polymorphism
-* Abstract classes
-* Custom exception creation
-* Collection Framework usage
-* Menu-driven application development
-* Real-world object modeling
+         School
+            │
+    ┌───────┴───────┐
+    │               │
+Students       Teachers
+(ArrayList)   (ArrayList)
+```
 
 ---
 
-## Future Enhancements
+## 📚 Learning Outcomes
 
-* File handling for data persistence
-* JDBC integration with MySQL
+* Class and Object Design
+* Inheritance & Polymorphism
+* Abstract Classes
+* Custom Exception Creation
+* Collection Framework Usage
+* Menu-Driven Application Development
+* Real-World Object Modeling
+
+---
+
+## 🔮 Future Enhancements
+
+* File Handling for Data Persistence
+* JDBC + MySQL Integration
 * Spring Boot REST APIs
-* Authentication and authorization
-* Graphical User Interface (GUI)
-* Web-based dashboard
+* Authentication & Authorization
+* GUI Development
+* Web-Based Dashboard
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-Developed as a Java OOP and Exception Handling project for learning and academic purposes.
+Developed as a Java OOP and Exception Handling project for learning, academic practice, and portfolio building.
