@@ -4,8 +4,8 @@ public class Student extends Person{
     private int rollNo;
     private HashMap<String, Integer> marks;
 
-    public Student(String name, int age, int rollNo){
-        super(name, age);
+    public Student(int id, String name, int age, int rollNo){
+        super(id, name,age);
         this.rollNo = rollNo;
         this.marks = new HashMap<>();
     }
