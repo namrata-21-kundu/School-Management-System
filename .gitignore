@@ -1,1 +1,13 @@
+# Java
 *.class
+
+# VS Code
+.vscode/
+
+# IntelliJ
+.idea/
+
+# Build folders
+bin/
+out/
+target/
