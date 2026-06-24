@@ -58,6 +58,37 @@ public class Main {
 
         //temporary Teacher.java test
         /*Teacher t1 = new Teacher(2, "namrata", 29, "english ",90000);
-        t1.displayInfo();*/
+        t1.displayInfo();
+
+        School school = new School();
+
+        Student s1 = new Student(1, "namrata",20, 5);
+        Student s2 = new Student(2, "dishari",21, 3);
+
+        s1.addMarks("Java", 95);
+        s2.addMarks("DSA", 90);
+
+        school.addStudent(s1);
+        school.addStudent(s2);
+
+        System.out.println("All Students:");
+        school.viewStudents();
+
+        Student found = school.searchStudent(3);
+
+        if (found != null) {
+            System.out.println("\nStudent Found:");
+            found.displayInfo();
+        }
+
+        boolean deleted = school.deleteStudent(5);
+
+        if (deleted) {
+            System.out.println("\nStudent Deleted Successfully");
+        }
+
+        System.out.println("\nRemaining Students:");
+        school.viewStudents();*/
+  
     }
 }
