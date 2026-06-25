@@ -41,7 +41,7 @@ public class Main {
         do{
             System.out.println("\n==== SCHOOL MANAGEMENT SYSTEM ===");
             System.out.println("STUDENT");
-            System.out.println("TECAHER");
+            System.out.println("TEACHER");
             System.out.println("EXIT");
 
             System.out.println("Enter choice: ");
@@ -73,6 +73,7 @@ public class Main {
                                 int rollNo = sc.nextInt();
                                 System.out.print("Enter Id: ");
                                 int sid = sc.nextInt();
+                                sc.nextLine();
 
                                 Student student = new Student(sid, sName, sAge, rollNo);
                                 school.addStudent(student);
@@ -117,7 +118,9 @@ public class Main {
                                 System.out.println("Invalid Choice.");
                         }
                     }while (!studentChoice.equals("back"));
-                
+                    
+                    break;
+
                     case "TEACHER":
 
                     String teacherChoice;
@@ -136,15 +139,18 @@ public class Main {
                             case "add":
                                 System.out.println("Enter Id: ");
                                 int tid = sc.nextInt();
+                                sc.nextLine();
                                 System.out.print("Enter Name: ");
                                 String tName = sc.nextLine();
                                 System.out.print("Enter Age: ");
                                 int tAge = sc.nextInt();
+                                sc.nextLine();
                                 System.out.print("Enter Subject: ");
                                 String subject = sc.nextLine();
                                 System.out.print("Enter Salary: ");
                                 double salary = sc.nextDouble();
-                                
+                                sc.nextLine();
+
                                 Teacher teacher =new Teacher(tid,tName,tAge,subject,salary);
 
                                 school.addTeacher(teacher);
@@ -191,7 +197,7 @@ public class Main {
                     } while (!teacherChoice.equals("back"));
                     break;
 
-                case "exit":    //main
+                case "EXIT":    //main
                     System.out.println("Exiting Program...");
                     break;
 
@@ -199,7 +205,7 @@ public class Main {
                     System.out.println("Invalid Choice.");
             }
 
-        } while (!choice.equals("exit")); 
+        } while (!choice.equals("EXIT")); 
         sc.close();
     
     }   
