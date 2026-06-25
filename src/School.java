@@ -46,6 +46,41 @@ public class School {
         return false;
     }
 
-    
+    //Add teacher
+    public void addTeacher(Teacher teacher){
+        teachers.add(teacher);
+    }
+
+    //View Teachers
+    public void viewTeachers(){
+        if(teachers.isEmpty()){
+            System.out.println("No teachers record found");
+            return;
+        }
+        for(Teacher teacher: teachers){
+            teacher.displayInfo();
+            System.out.println();
+        }
+    }
+
+    //search teacher
+    public Teacher searchTeacher(String subject){
+        for(Teacher teacher: teachers){
+            if(teacher.getSubject().equalsIgnoreCase(subject)){
+                return teacher;
+            }
+        }
+        return null;
+    }
+
+    //delete teacher
+    public boolean deleteTeacher(String subject){
+        Teacher teacher = searchTeacher(subject);
+        if(teacher!=null){
+            teachers.remove(teacher);
+            return true;
+        }
+        return false;
+    }
 
 }
