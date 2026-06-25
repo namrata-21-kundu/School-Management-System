@@ -8,6 +8,15 @@ public class Teacher extends Person {
         this.salary = salary;
     }
 
+    //getter
+    public String getName(){
+        return name;
+    }
+
+    public String getSubject(){
+        return subject;
+    }
+    
     @Override
     public void displayInfo(){
         System.out.println("---Teacher Details---");
