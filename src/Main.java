@@ -1,56 +1,9 @@
-import java.util.* ;
+import java.util.Scanner ;
 public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-
-        /*School task = new School();
         
-        while(true){
-            System.out.println("1. Add Event");
-            System.out.println("2. View Events");
-            System.out.println("3. Register Participant");
-            System.out.println("4. Exit");
-
-            int choice = sc.nextInt();
-
-            switch(choice){
-                case 1:
-                    System.out.println("Enter Event ID: ");
-                    int id = sc.nextInt();   
-                    sc.nextLine();
-
-                    System.out.println("Enter event name: ");
-                    String name = sc.nextLine();
-
-                    System.out.println("Enter date of event: ");
-                    String date = sc.nextLine();
-
-                    System.out.println("Enter venue: ");
-                    String venue = sc.nextLine();
-
-                    System.out.println("Enter seats: ");
-                    int seats = sc.nextInt();
-
-                    Event e = new Event(id, name, date, venue, seats);
-                    manager.addEvent(e);
-
-                    break;
-
-                case 2:
-                    manager.viewEvents();
-                    break;
-                    
-                case 3:
-                    break;
-                case 4:
-                    System.out.println("Thanks for visiting Event Management System. Exiting ---");
-                    break;
-                default:
-                    System.out.println("Wrong choice");
-            }
-        }*/
-
-        //temporary Student.java test
+        /*temporary Student.java test
         /*Student s1 = new Student(1, "nk", 20, 21);
         s1.addMarks("maths",90 );
         s1.addMarks("eng", 97);
@@ -59,36 +12,195 @@ public class Main {
         //temporary Teacher.java test
         /*Teacher t1 = new Teacher(2, "namrata", 29, "english ",90000);
         t1.displayInfo();
-
         School school = new School();
-
         Student s1 = new Student(1, "namrata",20, 5);
         Student s2 = new Student(2, "dishari",21, 3);
-
         s1.addMarks("Java", 95);
         s2.addMarks("DSA", 90);
-
         school.addStudent(s1);
         school.addStudent(s2);
-
         System.out.println("All Students:");
         school.viewStudents();
-
         Student found = school.searchStudent(3);
-
         if (found != null) {
             System.out.println("\nStudent Found:");
             found.displayInfo();
         }
-
         boolean deleted = school.deleteStudent(5);
-
         if (deleted) {
             System.out.println("\nStudent Deleted Successfully");
         }
-
         System.out.println("\nRemaining Students:");
         school.viewStudents();*/
   
-    }
+
+        School school = new School();
+
+        String choice;
+
+        do{
+            System.out.println("\n==== SCHOOL MANAGEMENT SYSTEM ===");
+            System.out.println("STUDENT");
+            System.out.println("TECAHER");
+            System.out.println("EXIT");
+
+            System.out.println("Enter choice: ");
+            choice = sc.nextLine().toUpperCase();
+
+            switch(choice){
+
+                case "STUDENT":
+                    String studentChoice;
+                    do{
+                        System.out.println("\n===== STUDENT MANAGEMENT =====");
+                        System.out.println("add");
+                        System.out.println("view");
+                        System.out.println("search");
+                        System.out.println("delete");
+                        System.out.println("back");
+
+                        System.out.print("Enter Choice: ");
+                        studentChoice = sc.nextLine().toLowerCase();
+
+                        switch (studentChoice) {
+
+                            case "add":
+                                System.out.print("Enter Name: ");
+                                String sName = sc.nextLine();
+                                System.out.print("Enter Age: ");
+                                int sAge = sc.nextInt();
+                                System.out.print("Enter Roll No: ");
+                                int rollNo = sc.nextInt();
+                                System.out.print("Enter Id: ");
+                                int sid = sc.nextInt();
+
+                                Student student = new Student(sid, sName, sAge, rollNo);
+                                school.addStudent(student);
+
+                                System.out.println("Student Added Successfully.");
+                                break;
+                            
+                            case "view":
+                                school.viewStudents();
+                                break;
+
+                            case "search":
+                                System.out.print("Enter Roll No: ");
+                                int searchRoll = sc.nextInt();
+                                Student foundStudent = school.searchStudent(searchRoll);
+                                if (foundStudent != null) {
+                                    System.out.println("\nStudent Found:");
+                                    foundStudent.displayInfo();
+                                } 
+                                else {
+                                    System.out.println("Student Not Found.");
+                                }
+                                break;
+                            
+                            case "delete":
+                                System.out.print("Enter Roll No: ");
+                                int deleteRoll = sc.nextInt();
+
+                                if (school.deleteStudent(deleteRoll)) {
+                                    System.out.println("Student Deleted.");
+                                } 
+                                else {
+                                    System.out.println("Student Not Found.");
+                                }
+
+                                break;
+
+                            case "back":
+                                break;
+
+                            default:
+                                System.out.println("Invalid Choice.");
+                        }
+                    }while (!studentChoice.equals("back"));
+                
+                    case "TEACHER":
+
+                    String teacherChoice;
+                    do {
+                        System.out.println("\n===== TEACHER MANAGEMENT =====");
+                        System.out.println("add");
+                        System.out.println("view");
+                        System.out.println("search");
+                        System.out.println("delete");
+                        System.out.println("back");
+
+                        System.out.print("Enter Choice: ");
+                        teacherChoice = sc.nextLine().toLowerCase();
+
+                        switch (teacherChoice) {
+                            case "add":
+                                System.out.println("Enter Id: ");
+                                int tid = sc.nextInt();
+                                System.out.print("Enter Name: ");
+                                String tName = sc.nextLine();
+                                System.out.print("Enter Age: ");
+                                int tAge = sc.nextInt();
+                                System.out.print("Enter Subject: ");
+                                String subject = sc.nextLine();
+                                System.out.print("Enter Salary: ");
+                                double salary = sc.nextDouble();
+                                
+                                Teacher teacher =new Teacher(tid,tName,tAge,subject,salary);
+
+                                school.addTeacher(teacher);
+                                System.out.println("Teacher Added Successfully.");
+                                break;
+
+                            case "view":
+                                school.viewTeachers();
+                                break;
+
+                            case "search":
+                                System.out.print("Enter Subject: ");
+                                String searchSubject = sc.nextLine();
+
+                                Teacher foundTeacher = school.searchTeacher(searchSubject);
+
+                                if (foundTeacher != null) {
+                                    System.out.println("\nTeacher Found:");
+                                    foundTeacher.displayInfo();
+                                } else {
+                                    System.out.println("Teacher Not Found.");
+                                }
+                                break;
+
+                            case "delete":
+                                System.out.print("Enter Subject: ");
+                                String deleteSubject = sc.nextLine();
+
+                                if (school.deleteTeacher(deleteSubject)) {
+                                    System.out.println("Teacher Deleted.");
+                                }
+                                else {
+                                    System.out.println("Teacher Not Found.");
+                                }
+                                break;
+
+                            case "back":
+                                break;
+
+                            default:
+                                System.out.println("Invalid Choice.");
+                        }
+
+                    } while (!teacherChoice.equals("back"));
+                    break;
+
+                case "exit":    //main
+                    System.out.println("Exiting Program...");
+                    break;
+
+                default:
+                    System.out.println("Invalid Choice.");
+            }
+
+        } while (!choice.equals("exit")); 
+        sc.close();
+    
+    }   
 }
