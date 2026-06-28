@@ -1,4 +1,4 @@
-# 🎓 School Management System (Java)
+# 🎓 School Management System (Core Java)
 
 A console-based School Management System built using Java to manage students, teachers, and academic records. The project demonstrates core Object-Oriented Programming (OOP) concepts, custom exception handling, and Java Collections through a menu-driven application.
 
